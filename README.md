@@ -41,6 +41,9 @@ Comandos para se localizar e mover dentro da estrutura de diretórios.
 
     # Listar incluindo todos os arquivos ocultos
     ls -a
+
+    #Listar apenas numerando a quantidade de arquivos presentes no diretório.
+    ls *.tree | wc -l
     ```
 
 #### `cd`
@@ -169,7 +172,15 @@ Comandos para ler e analisar o conteúdo de arquivos.
     # Procurar por uma sequência de DNA em um arquivo, ignorando maiúsculas/minúsculas
     grep -i "ATGCGTG" sequencias.fasta
     ```
-
+    
+#### `sed`
+* **Função:** Editor de fluxo de texto usado para filtrar e substituir texto dentro de arquivos.
+* **Exemplos:**
+    ```bash
+    # Encontrar uma palavra específica e substituir por uma nova palavra. Exemplo: substituir código da amostra (L25A9) por nome da espécie
+    sed -i 's/L25A9/Discocactus placentiformis/g' sequencias.fasta
+    ```
+    
 #### `nano`
 * **Função:** Um editor de texto simples e intuitivo para o terminal.
 * **Exemplo:**
